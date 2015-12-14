@@ -1,15 +1,25 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
 public class main 
 {
-	
 	public static void main(String[] args) 
 	{
-		String u;
-		u = JOptionPane.showInputDialog("What is your name?");
-		JOptionPane.showMessageDialog(null, "Hello " + u);
+		Writeto.first();
+		String z;
+
+		z = Readfrom.success();
+		Frame promptForName = new Frame("Enjoy the games " + z);
+	    promptForName.setVisible(true);
+       
 		
 		String bestpassword = ("y");
 		String userInput = null;

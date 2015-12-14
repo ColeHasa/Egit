@@ -14,7 +14,8 @@ public class Checkers  {
 	}
 	
    private void init() {
-	   JFrame frame = new JFrame("checkers");
+
+	   JFrame frame = new JFrame("checkers for ");
       frame.setLayout(null);  // layout in sizing
       
       frame.setBackground(new Color(0,100,30));  
