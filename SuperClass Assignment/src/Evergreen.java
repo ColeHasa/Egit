@@ -1,19 +1,19 @@
 
-public class Evergreen extends Tree{
+public class Evergreen extends Tree{ //subclass
 	
-	String location;
+	String location; //initializing variable
 	
 		public Evergreen(){
 			
-			super("green");
+			super("green"); //telling the lass what the super gets
 		}
-		
+		    //get set methods
 		public String getLeafcolor() {
 			return leafcolor;
 		}
 		
 		@Override
-		public void setLeafcolor(String color) {
+		public void setLeafcolor(String color) {	//override statement for super
 			leafcolor = color;
 		}
 

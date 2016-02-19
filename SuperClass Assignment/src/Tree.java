@@ -1,13 +1,13 @@
 
 public class Tree {
 	
-String barkcolor;
+String barkcolor; //state variables
 String leafcolor;
-int drinkwater;
+int drinkwater; //int variable
 
 	public Tree(String leafColor)
 	{
-		barkcolor = "brown";
+		barkcolor = "brown";    //initiate variables
 		leafcolor = leafColor;
 		drinkwater = 1;
 	}
