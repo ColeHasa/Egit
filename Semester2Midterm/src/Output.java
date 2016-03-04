@@ -10,6 +10,7 @@
 			try {
 
 				String content = tulipHeight;
+				String content2 = daisyHeight;
 
 				File file = new File("C:\\Users\\ColeHasa\\Documents\\cole\\Carroll\\Classes\\Computer Science\\log.txt");
 
@@ -21,6 +22,8 @@
 				FileWriter fw = new FileWriter(file.getAbsoluteFile());
 				BufferedWriter bw = new BufferedWriter(fw);
 				bw.write(content);
+				bw.newLine();
+				bw.write(content2);
 				bw.close();
 
 				System.out.println("Done");

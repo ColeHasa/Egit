@@ -1,4 +1,5 @@
 import javax.swing.JOptionPane;
+import java.util.*;
 
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -11,6 +12,12 @@ import java.io.IOException;
 public class Main {
 
 public static void main(String[] args) throws IOException {
+	
+	 // Instantiate a Date object
+    Date date = new Date();
+
+    // display time and date using toString()
+    System.out.println(date.toString());
 
 Flowers[] flowers = new Flowers[3]; //object array of flower colors
 flowers[0] = new Flowers("Green"); 
@@ -43,11 +50,11 @@ System.exit(0);
 try{ //another user input that sets the height converts the string to an integer
 ((Daisies) myflowers[1]).setHeight(Integer.parseInt(daisyHeight));
 }
-catch(NumberFormatException e){
+catch(NumberFormatException e){  //catching anything other than numbers
 JOptionPane.showMessageDialog(null, "User value was not an integer, try again.");
 System.exit(0);
 }
-String[] arr= null;
+String[] arr= null; //starting array with file
   List<String> itemsSchool = new ArrayList<String>();
   try 
   { 
@@ -58,7 +65,7 @@ String[] arr= null;
 
       while ((str_line = buffer.readLine()) != null) 
       { 
-          str_line = str_line.trim(); 
+          str_line = str_line.trim();  //sting operation
           if ((str_line.length()!=0))  
           { 
               itemsSchool.add(str_line);
@@ -73,6 +80,17 @@ String[] arr= null;
   }finally{}
    
 new Output(tulipHeight, daisyHeight);
+
+String[] options = new String[] {"Tulips", "Dasies"};
+int check = JOptionPane.showOptionDialog(null, "Which value would you like to check?", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
+        null, options, options[0]);
+
+if(check == 0){
+	JOptionPane.showMessageDialog(null, "The height you entered for your tulips was: " + tulipHeight);
+}
+else{
+	JOptionPane.showMessageDialog(null, "The height you entered for your daisies was: " + daisyHeight);
+}
 }
 
 }
