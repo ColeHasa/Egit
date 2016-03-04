@@ -1,6 +1,5 @@
 import javax.swing.JOptionPane;
 import java.util.*;
-
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +64,7 @@ String[] arr= null; //starting array with file
 
       while ((str_line = buffer.readLine()) != null) 
       { 
-          str_line = str_line.trim();  //sting operation
+          str_line = str_line.trim();  //string operation
           if ((str_line.length()!=0))  
           { 
               itemsSchool.add(str_line);
@@ -79,9 +78,9 @@ String[] arr= null; //starting array with file
 
   }finally{}
    
-new Output(tulipHeight, daisyHeight);
+new Output(tulipHeight, daisyHeight); //final questions
 
-String[] options = new String[] {"Tulips", "Dasies"};
+String[] options = new String[] {"Tulips", "Dasies"}; //new string for joptionpane
 int check = JOptionPane.showOptionDialog(null, "Which value would you like to check?", null, JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE,
         null, options, options[0]);
 
